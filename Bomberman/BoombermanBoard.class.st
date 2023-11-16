@@ -1,5 +1,5 @@
 Class {
-	#name : #Board,
+	#name : #BoombermanBoard,
 	#superclass : #MygBoard,
 	#category : #Bomberman
 }
