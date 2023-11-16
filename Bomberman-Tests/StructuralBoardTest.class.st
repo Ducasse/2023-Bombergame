@@ -19,10 +19,10 @@ StructuralBoardTest >> testBoardHeight [
 
 	|board|
 	
-	board := BoombermanBoard  createWithBoard:
+	board := BombermanBoard  createWithBoard:
 						((MygLevelImporter
 			          	fromString: '#@  #'
-			          	fromPackage: BoombermanBoard  package) collect: [ :each | each configured ]).
+			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
 				
 	self assert: board height equals: 1.
 ]
@@ -32,10 +32,10 @@ StructuralBoardTest >> testBoardWidth [
 
 	|board|
 	
-	board := BoombermanBoard  createWithBoard:
+	board := BombermanBoard  createWithBoard:
 						((MygLevelImporter
 			          	fromString: '#@  #'
-			          	fromPackage: BoombermanBoard  package) collect: [ :each | each configured ]).
+			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
 				
 	self assert: board width equals: 5.
 ]
@@ -45,10 +45,10 @@ StructuralBoardTest >> testPlayerPosition [
 
 	|board|
 
-	board := BoombermanBoard  createWithBoard:
+	board := BombermanBoard  createWithBoard:
 						((MygLevelImporter
 			          	fromString: self map
-			          	fromPackage: BoombermanBoard  package) collect: [ :each | each configured ]).
+			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
 				
 			self assert: board player position x equals: 2.
 			self assert: board player position y equals: 2.
@@ -59,24 +59,24 @@ StructuralBoardTest >> testVoisinPlayer [
 
 	|board|
 
-	board := BoombermanBoard  createWithBoard:
+	board := BombermanBoard  createWithBoard:
 						((MygLevelImporter
 			          	fromString: self map
-			          	fromPackage: BoombermanBoard  package) collect: [ :each | each configured ]).
+			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
 				
 	self assert: 
 		((board atPosition: CpDirection north * board player position)
-			isKindOf: BoombermanWall).
+			isKindOf: BombermanWall).
 			
 	self assert: 
 		((board atPosition: CpDirection south * board player position)
-			isKindOf: BoombermanBox).
+			isKindOf: BombermanBox).
 			
 	self assert: 
 		((board atPosition: CpDirection east * board player position)
-			isKindOf: BoombermanBox).
+			isKindOf: BombermanBox).
 			
 	self assert: 
 		((board atPosition: CpDirection west * board player position)
-			isKindOf: BoombermanWall).
+			isKindOf: BombermanWall).
 ]

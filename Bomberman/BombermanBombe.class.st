@@ -1,5 +1,5 @@
 Class {
-	#name : #BoombermanBox,
+	#name : #BombermanBombe,
 	#superclass : #Object,
 	#category : #Bomberman
 }
