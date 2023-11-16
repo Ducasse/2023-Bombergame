@@ -22,6 +22,11 @@ BombermanBoard >> height [
 ]
 
 { #category : #accessing }
+BombermanBoard >> player [ 
+	^ player
+]
+
+{ #category : #accessing }
 BombermanBoard >> width [ 
 	^ grid width
 ]
