@@ -20,3 +20,8 @@ BombermanBoard class >> createWithBoard: aCTNewArray2D [
 BombermanBoard >> height [ 
 	^ grid height
 ]
+
+{ #category : #accessing }
+BombermanBoard >> width [ 
+	^ grid width
+]
