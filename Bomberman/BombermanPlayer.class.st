@@ -8,3 +8,8 @@ Class {
 BombermanPlayer class >> textualMapCharacter [ 
 	^ $@
 ]
+
+{ #category : #testing }
+BombermanPlayer >> isPlayer [ 
+^ true
+]

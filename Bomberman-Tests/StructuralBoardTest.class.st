@@ -7,11 +7,10 @@ Class {
 { #category : #data }
 StructuralBoardTest >> map [
 
-^	'######
-	 #@$  #
-	 #$   #
-	 ######
-	'
+^'######
+#@$  #
+#$   #
+######'	
 ]
 
 { #category : #' tests' }
