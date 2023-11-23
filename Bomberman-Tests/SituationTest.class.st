@@ -16,7 +16,7 @@ SituationTest >> testPlayerMoveGround [
 			          each configured ]).
 		
 		player := board atColumn: 3 atRow: 1.
-		player := board player position.
+		position := board player position.
 		
 		self assert: (board player move: CpDirection east).
 		
