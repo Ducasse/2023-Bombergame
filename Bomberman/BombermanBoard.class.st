@@ -31,6 +31,12 @@ BombermanBoard >> addBox: aBox [
 
 ]
 
+{ #category : #'low level access' }
+BombermanBoard >> atColumn: anInteger atRow: anInteger2 [
+
+	^ grid at: anInteger @ anInteger2
+]
+
 { #category : #accessing }
 BombermanBoard >> atPosition: aCpPositionable [ 
 	^ (grid at: aCpPositionable x @ aCpPositionable y)
