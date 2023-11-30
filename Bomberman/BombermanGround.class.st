@@ -8,3 +8,8 @@ Class {
 BombermanGround class >> textualMapCharacter [
 	^ Character space
 ]
+
+{ #category : #testing }
+BombermanGround >> isGround [ 
+	^true
+]
