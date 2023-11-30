@@ -32,7 +32,7 @@ BombermanPlayer >> isPlayer [
 
 { #category : #move }
 BombermanPlayer >> move: aCpDirection [
-
+	
 	self facing: aCpDirection class.
 	^ super move: aCpDirection
 ]
