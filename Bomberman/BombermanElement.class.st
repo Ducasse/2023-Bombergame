@@ -20,3 +20,8 @@ BombermanElement >> configured [
 
 	^self
 ]
+
+{ #category : #testing }
+BombermanElement >> isPlayer [
+	^ false
+]
