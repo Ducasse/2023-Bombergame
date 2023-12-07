@@ -13,6 +13,11 @@ BombermanPlayer class >> textualMapCharacter [
 	^ $@
 ]
 
+{ #category : #'as yet unclassified' }
+BombermanPlayer >> explose [
+	self looseOneLife
+]
+
 { #category : #accessing }
 BombermanPlayer >> facing: aCpDirection [
 	

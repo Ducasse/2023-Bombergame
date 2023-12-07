@@ -141,10 +141,13 @@ ObjetTest >> testBombeExplosePlayer [
 	"On récupère le player"
 	player := board atColumn: 3 atRow: 1 .
 
+	"On vérifie que le player possède bien 3 vie"
 	self assert: player life equals: 3.
 	
+	"On fait exploser la bombe sur le player"
 	bombe explose: player.
 	
+	"On vérifie que le joueur a perdue une vie"
 	self assert: player life equals: 2.
 
 	"On vérifie que la map à bel et bien été modifié"
