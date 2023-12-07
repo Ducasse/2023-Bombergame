@@ -65,14 +65,6 @@ BombermanBoard >> configureGrid: aCTNewArray2D [
 		setPlayer
 ]
 
-{ #category : #actions }
-BombermanBoard >> endGame [
-
-	ended ifTrue: [ ^ self ].
-	ended := true.
-	gameManager ifNotNil: [ gameManager registerLevel ]
-]
-
 { #category : #accessing }
 BombermanBoard >> gameManager [ 
 	

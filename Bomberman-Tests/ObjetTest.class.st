@@ -41,8 +41,14 @@ ObjetTest >> testBombeExploseBox [
 	"On vérifie que la box est bien devenue en Ground"
 	self assert: ground isGround.
 	
+	"On récupère la position de la bombe après l'explosion"
+	bombe := board atColumn: 2 atRow: 1.
+	
+	"On vérifie que la bombe est bien devenue en Ground"
+	self assert: bombe isGround.
+	
 	"On vérifie que la map à bel et bien été modifié"
-	self assert: board asciiString equals: '#O @#'.
+	self assert: board asciiString equals: '#  @#'.
 
 
 ]
@@ -75,8 +81,14 @@ ObjetTest >> testBombeExploseGround [
 	"On vérifie que le ground est bien un ground (après l'explosion)"
 	self assert: ground isGround.
 	
+	"On récupère la position de la bombe après l'explosion"
+	bombe := board atColumn: 2 atRow: 1.
+	
+	"On vérifie que la bombe est bien devenue en Ground"
+	self assert: bombe isGround.
+	
 	"On vérifie que la map à bel et bien été modifié"
-	self assert: board asciiString equals: '#O @#'.
+	self assert: board asciiString equals: '#  @#'.
 ]
 
 { #category : #tests }
@@ -120,6 +132,12 @@ ObjetTest >> testBombeExploseNeighbors [
 	self assert: droite isGround.
 	self assert: gauche isPlayer.
 	self assert: gauche life equals: 2.
+	
+	"On récupère la position de la bombe après l'explosion"
+	bombe := board atColumn: 3 atRow: 2.
+	
+	"On vérifie que la bombe est bien devenue en Ground"
+	self assert: bombe isGround.
 
 ]
 
@@ -150,9 +168,15 @@ ObjetTest >> testBombeExplosePlayer [
 	
 	"On vérifie que le joueur a perdue une vie"
 	self assert: player life equals: 2.
+	
+	"On récupère la position de la bombe après l'explosion"
+	bombe := board atColumn: 2 atRow: 1.
+	
+	"On vérifie que la bombe est bien devenue en Ground"
+	self assert: bombe isGround.
 
 	"On vérifie que la map à bel et bien été modifié"
-	self assert: board asciiString equals: '#O@#'.
+	self assert: board asciiString equals: '# @#'.
 
 
 ]
@@ -185,8 +209,14 @@ ObjetTest >> testBombeExploseWall [
 	"On vérifie que le wall est bien un wall (après l'explosion)"
 	self assert: wall isWall.
 	
+	"On récupère la position de la bombe après l'explosion"
+	bombe := board atColumn: 3 atRow: 1.
+	
+	"On vérifie que la bombe est bien devenue en Ground"
+	self assert: bombe isGround.
+	
 	"On vérifie que la map à bel et bien été modifié"
-	self assert: board asciiString equals: '#@O#'.
+	self assert: board asciiString equals: '#@ #'.
 
 
 
