@@ -103,6 +103,7 @@ ObjetTest >> testBombeExploseNeighbors [
 	self assert: haut isWall.
 	self assert: droite isBox.
 	self assert: gauche isPlayer.
+	self assert: gauche life equals:3. 
 	
 	"La bombe explose sur ses voisins"
 	bombe exploseNeighbors.
@@ -118,7 +119,7 @@ ObjetTest >> testBombeExploseNeighbors [
 	self assert: haut isWall.
 	self assert: droite isGround.
 	self assert: gauche isPlayer.
-
+	self assert: gauche life equals: 2.
 
 ]
 
