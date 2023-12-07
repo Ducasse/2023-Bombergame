@@ -4,6 +4,15 @@ Class {
 	#category : #'Bomberman-Tests'
 }
 
+{ #category : #accessing }
+ObjetTest >> map [
+
+^'######
+#@O$ #
+#     #
+######'	
+]
+
 { #category : #' tests' }
 ObjetTest >> testBombeExploseBox [
 
@@ -68,6 +77,49 @@ ObjetTest >> testBombeExploseGround [
 	
 	"On vérifie que la map à bel et bien été modifié"
 	self assert: board asciiString equals: '#O @#'.
+]
+
+{ #category : #tests }
+ObjetTest >> testBombeExploseNeighbors [
+
+	|board bombe droite gauche haut bas|
+
+	board := BombermanBoard  createWithBoard:
+						((MygLevelImporter
+			          	fromString: self map
+			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
+				
+	"On récupère la bombe"
+	bombe := board atColumn: 3 atRow: 2 .
+	
+	"On récupère chaque voisin de la bombe"
+	droite := board atColumn: 4 atRow: 2 .
+	gauche := board atColumn: 2 atRow: 2 .
+	haut := board atColumn: 3 atRow: 1 .
+	bas := board atColumn: 3 atRow: 3 .
+	
+	"On vérifie la nature des voisins de la bombe"
+	self assert: bas isGround.
+	self assert: haut isWall.
+	self assert: droite isBox.
+	self assert: gauche isPlayer.
+	
+	"La bombe explose sur ses voisins"
+	bombe exploseNeighbors.
+	
+	"On récupère chaque voisin de la bombe"
+	droite := board atColumn: 4 atRow: 2 .
+	gauche := board atColumn: 2 atRow: 2 .
+	haut := board atColumn: 3 atRow: 1 .
+	bas := board atColumn: 3 atRow: 3 .
+
+	"On vérifie que tout a bel et bien été modifié"
+	self assert: bas isGround.
+	self assert: haut isWall.
+	self assert: droite isGround.
+	self assert: gauche isPlayer.
+
+
 ]
 
 { #category : #' tests' }
