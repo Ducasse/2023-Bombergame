@@ -241,3 +241,26 @@ SituationTest >> testPlayerOrientedTop [
 	
 	
 ]
+
+{ #category : #tests }
+SituationTest >> testPlayerSetBombeGround [
+
+	"Variable utiles pour le test"
+	| board player |
+	
+	"On crée le Board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '#@  #'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	"On récupère le player"
+	player := board atColumn: 2 atRow: 1 .
+	
+	"On fait regarder le joueur vers le ground"
+	player facing: CpEastDirection.
+	
+	"On vérifie que le joueur peut poser la bombe"
+	self assert: player setBombe.
+]
