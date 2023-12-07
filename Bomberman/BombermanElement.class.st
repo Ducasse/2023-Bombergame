@@ -78,6 +78,11 @@ BombermanElement >> explose [
 ]
 
 { #category : #testing }
+BombermanElement >> isBox [
+	^false
+]
+
+{ #category : #testing }
 BombermanElement >> isGround [
 	^ false
 ]
