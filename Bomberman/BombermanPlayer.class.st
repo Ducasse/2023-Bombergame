@@ -19,6 +19,11 @@ BombermanPlayer >> explose [
 ]
 
 { #category : #accessing }
+BombermanPlayer >> facing [ 
+	^facing
+]
+
+{ #category : #accessing }
 BombermanPlayer >> facing: aCpDirection [
 	
 	facing := aCpDirection 
