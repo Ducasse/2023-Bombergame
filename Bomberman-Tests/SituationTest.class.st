@@ -4,6 +4,15 @@ Class {
 	#category : #'Bomberman-Tests'
 }
 
+{ #category : #accessing }
+SituationTest >> map [
+
+^'######
+#    #
+#@    #
+######'	
+]
+
 { #category : #tests }
 SituationTest >> testPlayerMoveBox [
 	
@@ -168,6 +177,37 @@ SituationTest >> testPlayerOrientedRigth [
 	
 	"On vérifie que le player regarde vers l'est"
 	self assert: player facing equals: CpEastDirection .
+	
+	
+]
+
+{ #category : #tests }
+SituationTest >> testPlayerOrientedTop [
+
+	"Variable utiles pour le test"
+	| board player |
+	
+	"On crée le Board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: self map
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	"On récupère le player"
+	player := board atColumn: 2 atRow: 3 .
+	
+	"On vérifie qu'on a bien le player"
+	self assert: player isPlayer.
+	
+	"On vérifie que le player regarde vers le sud"
+	self assert: player facing equals: CpSouthDirection.
+	
+	"On fait bouger le player vers le north"
+	self assert: (player move: CpDirection north).
+	
+	"On vérifie que le player regarde vers le north"
+	self assert: player facing equals: CpNorthDirection  .
 	
 	
 ]
