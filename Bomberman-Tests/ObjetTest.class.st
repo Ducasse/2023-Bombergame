@@ -7,14 +7,35 @@ Class {
 { #category : #' tests' }
 ObjetTest >> testBombeExploseBox [
 
-	|bombe box|
+	"Variable utile pour les tests"
+	|bombe box board ground|
 	
-	bombe := BombermanBombe new.
-	box := BombermanBox new.
+	"On crée le board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '#O$@#'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	"On récupère la bombe"
+	bombe := board atColumn: 2 atRow: 1.
 	
+	"On récupère la box"
+	box := board atColumn: 3 atRow: 1 .
+	
+	"On fait exploser la bombe sur la box"
 	bombe explose: box.
 	
-	self assert: (box isKindOf: BombermanGround).
+	"On récupère la case qui à explosé"
+	ground := board atColumn: 3 atRow: 1 .
+	
+	"On vérifie que la box est bien devenue en Ground"
+	self assert: ground isGround.
+	
+	"On vérifie que la map à bel et bien été modifié"
+	self assert: board asciiString equals: '#O @#'.
+
+
 ]
 
 { #category : #' tests' }
