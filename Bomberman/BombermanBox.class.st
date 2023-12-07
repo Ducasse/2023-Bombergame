@@ -16,3 +16,12 @@ BombermanBox >> bringIn: anActor going: aDirection [
 	
 	^ false
 ]
+
+{ #category : #'as yet unclassified' }
+BombermanBox >> explose [ 
+	
+	|previousPosition|
+
+	previousPosition := self position.
+	self board atColumn: previousPosition x atRow: previousPosition y put: BombermanGround new .
+]
