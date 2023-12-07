@@ -87,7 +87,7 @@ BombermanBoard >> initialize [
 
 	super initialize.
 	ended := false.
-	boxes := OrderedCollection new
+	boxes := OrderedCollection new.
 ]
 
 { #category : #testing }

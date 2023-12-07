@@ -112,6 +112,36 @@ SituationTest >> testPlayerMoveWall [
 ]
 
 { #category : #tests }
+SituationTest >> testPlayerOrientedLeft [
+
+	"Variable utiles pour le test"
+	| board player |
+	
+	"On crée le Board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '# @ #'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	"On récupère le player"
+	player := board atColumn: 3 atRow: 1 .
+	
+	"On vérifie qu'on a bien le player"
+	self assert: player isPlayer.
+	
+	"On vérifie que le player regarde vers le sud"
+	self assert: player facing equals: CpSouthDirection.
+
+	"On fait bouger le player vers l'ouest"
+	self assert: (player move: CpDirection west).
+	
+	"On vérifie que le player regarde vers l'ouest"
+	self assert: player facing equals: CpWestDirection  .
+
+]
+
+{ #category : #tests }
 SituationTest >> testPlayerOrientedRigth [
 
 	"Variable utiles pour le test"
