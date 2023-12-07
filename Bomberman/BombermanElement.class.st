@@ -87,6 +87,11 @@ BombermanElement >> isPlayer [
 	^ false
 ]
 
+{ #category : #testing }
+BombermanElement >> isWall [ 
+	^ false
+]
+
 { #category : #move }
 BombermanElement >> move: aCpDirection [
 
