@@ -123,6 +123,37 @@ ObjetTest >> testBombeExploseNeighbors [
 ]
 
 { #category : #' tests' }
+ObjetTest >> testBombeExplosePlayer [
+
+	"Variable utile pour les tests"
+	|player bombe board|
+	
+	"On crée le board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '#O@#'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	"On récupère la bombe"
+	bombe := board atColumn: 2 atRow: 1 .
+	
+	"On récupère le player"
+	player := board atColumn: 3 atRow: 1 .
+
+	self assert: player life equals: 3.
+	
+	bombe explose: player.
+	
+	self assert: player life equals: 2.
+
+	"On vérifie que la map à bel et bien été modifié"
+	self assert: board asciiString equals: '#O@#'.
+
+
+]
+
+{ #category : #' tests' }
 ObjetTest >> testBombeExploseWall [
 
 	"Variable utile pour les tests"
