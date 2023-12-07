@@ -2,7 +2,8 @@ Class {
 	#name : #BombermanPlayer,
 	#superclass : #BombermanElement,
 	#instVars : [
-		'facing'
+		'facing',
+		'life'
 	],
 	#category : #Bomberman
 }
@@ -22,12 +23,23 @@ BombermanPlayer >> facing: aCpDirection [
 BombermanPlayer >> initialize [ 
 
 	super initialize.
-	facing := CpSouthDirection
+	facing := CpSouthDirection.
+	life := 3.
 ]
 
 { #category : #testing }
 BombermanPlayer >> isPlayer [ 
 ^ true
+]
+
+{ #category : #accessing }
+BombermanPlayer >> life [ 
+	^life
+]
+
+{ #category : #'as yet unclassified' }
+BombermanPlayer >> looseOneLife [
+	life := life - 1 .
 ]
 
 { #category : #move }
