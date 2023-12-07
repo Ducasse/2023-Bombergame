@@ -73,12 +73,38 @@ ObjetTest >> testBombeExploseGround [
 { #category : #' tests' }
 ObjetTest >> testBombeExploseWall [
 
-	|bombe wall|
+	"Variable utile pour les tests"
+	|bombe wall board|
 	
-	bombe := BombermanBombe new.
-	wall := BombermanWall new.
+	"On crée le board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '#@O#'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
 	
-	 self deny: bombe explose: wall.
+	"On récupère la bombe"
+	bombe := board atColumn: 3 atRow: 1 .
 	
+	"On récupère le wall"
+	wall := board atColumn: 4 atRow: 1 .
 	
+	"On fait exploser la bombe sur le wall"
+	bombe explose: wall.
+
+	"On récupère le wall après l'explosion"
+	wall := board atColumn: 4 atRow: 1 .
+
+	"On vérifie que le wall est bien un wall (après l'explosion)"
+	self assert: wall isWall.
+	
+	"On vérifie que la map à bel et bien été modifié"
+	self assert: board asciiString equals: '#@O#'.
+
+
+
+
+
+
+
 ]

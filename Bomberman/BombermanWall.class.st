@@ -16,3 +16,8 @@ BombermanWall >> bringIn: anActor going: aDirection [
 	
 	^ false
 ]
+
+{ #category : #testing }
+BombermanWall >> isWall [
+	^ true
+]
