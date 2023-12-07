@@ -25,3 +25,8 @@ BombermanBox >> explose [
 	previousPosition := self position.
 	self board atColumn: previousPosition x atRow: previousPosition y put: BombermanGround new .
 ]
+
+{ #category : #testing }
+BombermanBox >> isBox [ 
+	^ true
+]
