@@ -71,6 +71,12 @@ BombermanElement >> defaultBackground [
 	^ BombermanGround  new
 ]
 
+{ #category : #'as yet unclassified' }
+BombermanElement >> explose [ 
+
+	^ false.
+]
+
 { #category : #testing }
 BombermanElement >> isGround [
 	^ false
