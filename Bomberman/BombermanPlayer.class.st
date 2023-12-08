@@ -58,3 +58,17 @@ BombermanPlayer >> move: aCpDirection [
 	self facing: aCpDirection class.
 	^ super move: aCpDirection
 ]
+
+{ #category : #initialization }
+BombermanPlayer >> setBombe [ [
+	| bombLocation bomb |
+
+    bombLocation := self position.
+    bomb := BombermanBombe new at: bombLocation.
+    self board atColumn: bombLocation x atRow: bombLocation y put: bomb.
+
+    "Return true to indicate the bomb has been successfully set."
+    ^ true
+]
+
+]
