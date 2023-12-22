@@ -60,6 +60,7 @@ BombermanPlayer >> move: aCpDirection [
 ]
 
 { #category : #initialization }
+
 BombermanPlayer >> setBombe [
 
 	|  bombLocation bomb |
@@ -72,4 +73,5 @@ BombermanPlayer >> setBombe [
 	
 	^bomb.
 	
+
 ]
