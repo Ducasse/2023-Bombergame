@@ -113,3 +113,8 @@ BombermanElement >> moveIn: aNeighbor going: aDirection [
 	
 	^ aNeighbor bringIn: self going: aDirection
 ]
+
+{ #category : #initialization }
+BombermanElement >> setBombe [
+	^false
+]
