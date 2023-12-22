@@ -243,10 +243,10 @@ SituationTest >> testPlayerOrientedTop [
 ]
 
 { #category : #tests }
-SituationTest >> testPlayerSetBombeGround [
+SituationTest >> testPlayerSetBombe [
 
 	"Variable utiles pour le test"
-	| board player |
+	| board player bombe|
 	
 	"On crée le Board"
 	board := BombermanBoard  createWithBoard:
@@ -258,9 +258,8 @@ SituationTest >> testPlayerSetBombeGround [
 	"On récupère le player"
 	player := board atColumn: 2 atRow: 1 .
 	
-	"On fait regarder le joueur vers le ground"
-	player facing: CpEastDirection.
+	"Le joueur pose la bombe où il se trouve"
+	bombe := player setBombe.
 	
-	"On vérifie que le joueur peut poser la bombe"
-	self assert: player setBombe.
+	self assert:  player position equals: bombe position.
 ]
