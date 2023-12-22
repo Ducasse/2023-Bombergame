@@ -126,6 +126,25 @@ BombermanBoard >> setBoxes [
 ]
 
 { #category : #initialization }
+BombermanBoard >> setFinalDoor [ 
+
+	|door randx randy pos|
+	
+	door := BombermanDoor new.
+	
+	randx := (1 to: self width) atRandom.
+	randy := (1 to: self height) atRandom.
+	
+	self atColumn: randx  atRow: randy put: door.
+	
+	pos := (randx@randy).
+	
+	door position: pos. 
+	
+	^door.
+]
+
+{ #category : #initialization }
 BombermanBoard >> setPlayer [
 
 	player := grid contents detect: #isPlayer
