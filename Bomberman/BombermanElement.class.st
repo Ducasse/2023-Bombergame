@@ -88,6 +88,12 @@ BombermanElement >> isGround [
 ]
 
 { #category : #testing }
+BombermanElement >> isKey [
+
+	^false
+]
+
+{ #category : #testing }
 BombermanElement >> isPlayer [
 	^ false
 ]
