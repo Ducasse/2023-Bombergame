@@ -39,6 +39,19 @@ StructuralBoardTest >> testBoardWidth [
 	self assert: board width equals: 5.
 ]
 
+{ #category : #' tests' }
+StructuralBoardTest >> testKeyCreateInBoard [ 
+
+	|board|
+	
+	board := BombermanBoard  createWithBoard:
+						((MygLevelImporter
+			          	fromString: '#@  #'
+			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
+	
+	self assert: (board getPositionKey) isKey equals: true.  
+]
+
 { #category : #'tests-building' }
 StructuralBoardTest >> testPlayerPosition [
 
