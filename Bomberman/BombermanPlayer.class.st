@@ -3,7 +3,8 @@ Class {
 	#superclass : #BombermanElement,
 	#instVars : [
 		'facing',
-		'life'
+		'life',
+		'key'
 	],
 	#category : #Bomberman
 }
@@ -29,12 +30,19 @@ BombermanPlayer >> facing: aCpDirection [
 	facing := aCpDirection 
 ]
 
+{ #category : #accessing }
+BombermanPlayer >> getKey [ 
+
+	^key
+]
+
 { #category : #initialization }
 BombermanPlayer >> initialize [ 
 
 	super initialize.
 	facing := CpSouthDirection.
 	life := 3.
+	key := false.
 ]
 
 { #category : #testing }
@@ -73,4 +81,10 @@ BombermanPlayer >> setBombe [
 	^bomb.
 	
 
+]
+
+{ #category : #initialization }
+BombermanPlayer >> setKey: anObject [ 
+
+	anObject isKey ifTrue: (key := true).
 ]
