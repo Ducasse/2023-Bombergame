@@ -5,6 +5,27 @@ Class {
 }
 
 { #category : #tests }
+PlayerTest >> testPlayerHaveKey [
+
+	|player key|
+	
+	"On crée le player"
+	player := BombermanPlayer new.
+	
+	"On crée la clé"
+	key := BombermanKey new.
+	
+	"On vérifie que le player ne posséde pour le moment pas de clé"
+	self assert: player getKey equals: false.
+	
+	"On donne au player la clé"
+	player setKey: key.
+
+	"On vérifie que le player posséde une clé"
+	self assert: player getKey equals: true.
+]
+
+{ #category : #tests }
 PlayerTest >> testPlayerlooseLife [
 
 	"Variable pour le player"
