@@ -2,7 +2,8 @@ Class {
 	#name : #BombermanElement,
 	#superclass : #MygAbstractBox,
 	#instVars : [
-		'background'
+		'background',
+		'key'
 	],
 	#category : #Bomberman
 }
@@ -65,6 +66,12 @@ BombermanElement >> configured [
 	^self
 ]
 
+{ #category : #accessing }
+BombermanElement >> containKey [
+
+	^key.
+]
+
 { #category : #initialization }
 BombermanElement >> defaultBackground [
 
@@ -123,4 +130,11 @@ BombermanElement >> moveIn: aNeighbor going: aDirection [
 { #category : #initialization }
 BombermanElement >> setBombe [
 	^false
+]
+
+{ #category : #initialization }
+BombermanElement >> setKey [ 
+
+	key := false.
+	^self board setKey.
 ]

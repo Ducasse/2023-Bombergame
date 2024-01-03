@@ -13,3 +13,11 @@ BombermanGround class >> textualMapCharacter [
 BombermanGround >> isGround [ 
 	^true
 ]
+
+{ #category : #initialization }
+BombermanGround >> setKey [ 
+
+	key := true.
+	self board setPositionKey: self .
+	^true.
+]
