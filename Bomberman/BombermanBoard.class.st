@@ -5,7 +5,8 @@ Class {
 		'player',
 		'boxes',
 		'ended',
-		'gameManager'
+		'gameManager',
+		'positionKey'
 	],
 	#category : #Bomberman
 }
@@ -78,6 +79,12 @@ BombermanBoard >> gameManager: aSkGameManager [
 ]
 
 { #category : #accessing }
+BombermanBoard >> getPositionKey [
+
+	^positionKey.
+]
+
+{ #category : #accessing }
 BombermanBoard >> height [ 
 	^ grid height
 ]
@@ -145,9 +152,29 @@ BombermanBoard >> setFinalDoor [
 ]
 
 { #category : #initialization }
+BombermanBoard >> setKey [
+
+	|randx randy case|
+	
+	randx := (1 to: self width) atRandom.
+	randy := (1 to: self height) atRandom.
+	
+	case := self atColumn: randx  atRow: randy.
+	
+	case setKey.
+	 
+]
+
+{ #category : #initialization }
 BombermanBoard >> setPlayer [
 
 	player := grid contents detect: #isPlayer
+]
+
+{ #category : #initialization }
+BombermanBoard >> setPositionKey: posKey [  
+
+	positionKey := posKey.
 ]
 
 { #category : #move }

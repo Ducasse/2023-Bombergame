@@ -3,8 +3,7 @@ Class {
 	#superclass : #BombermanElement,
 	#instVars : [
 		'facing',
-		'life',
-		'key'
+		'life'
 	],
 	#category : #Bomberman
 }

@@ -49,7 +49,9 @@ StructuralBoardTest >> testKeyCreateInBoard [
 			          	fromString: '#@  #'
 			          	fromPackage: BombermanBoard  package) collect: [ :each | each configured ]).
 	
-	self assert: (board getPositionKey) isKey equals: true.  
+	board setKey.
+	
+	self assert: (board getPositionKey) containKey equals: true.  
 ]
 
 { #category : #'tests-building' }

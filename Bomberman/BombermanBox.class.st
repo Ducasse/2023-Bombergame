@@ -30,3 +30,11 @@ BombermanBox >> explose [
 BombermanBox >> isBox [ 
 	^ true
 ]
+
+{ #category : #initialization }
+BombermanBox >> setKey [ 
+
+	key := true.
+	self board setPositionKey: self .
+	^true.
+]
