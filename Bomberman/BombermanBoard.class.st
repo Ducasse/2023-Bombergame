@@ -49,7 +49,8 @@ BombermanBoard >> atColumn: anInteger atRow: anInteger2 [
 { #category : #'low level access' }
 BombermanBoard >> atColumn: anInteger atRow: anInteger2 put: anElement [
 
-	grid at: anInteger @ anInteger2 put: anElement
+	grid at: anInteger @ anInteger2 put: anElement.
+	
 ]
 
 { #category : #accessing }
