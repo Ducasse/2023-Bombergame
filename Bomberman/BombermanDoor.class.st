@@ -21,3 +21,9 @@ BombermanDoor >> initialize [
 
 	super initialize.
 ]
+
+{ #category : #testing }
+BombermanDoor >> isDoor [ 
+
+	^true.
+]
