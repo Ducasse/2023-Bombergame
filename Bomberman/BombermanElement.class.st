@@ -90,6 +90,12 @@ BombermanElement >> isBox [
 ]
 
 { #category : #testing }
+BombermanElement >> isDoor [ 
+
+	^false.
+]
+
+{ #category : #testing }
 BombermanElement >> isGround [
 	^ false
 ]
