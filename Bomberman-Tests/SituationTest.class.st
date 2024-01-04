@@ -147,22 +147,24 @@ SituationTest >> testPlayerMoveWall [
 SituationTest >> testPlayerOpenDoor [
 
 "Variables pour réaliser les tests "
-	| board player |
+	| board player key|
 	
 	"On crée le Board"
 	board := BombermanBoard  createWithBoard:
 		         ((MygLevelImporter
-			           fromString: '#@  #'
+			           fromString: '#@D #'
 			           fromPackage: BombermanBoard  package) do: [ :each |
 			          each configured ]).
 	
 	player := board atColumn: 2 atRow: 1.
 	
-	self assert: player isPlayer equals: true. 	
+	self assert: player isPlayer equals: true. 
 	
-	board atColumn: 3 atRow: 1 put: BombermanDoor new.
+	key := BombermanKey new.
 	
-	self assert: (player move: CpDirection east).
+	player setKey: key.
+	
+	self assert: (board player move: CpDirection east).
 ]
 
 { #category : #tests }
