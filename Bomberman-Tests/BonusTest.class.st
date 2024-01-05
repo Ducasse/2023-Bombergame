@@ -20,5 +20,9 @@ BonusTest >> testCaseContainBonus [
 	
 	case := board atColumn: 2 atRow: 1.
 	
-	self deny: case containBonus.
+	self assert: case containBonus equals: false.
+	
+	case addBonus: bonus.
+	
+	self assert: case containBonus equals: true.
 ]
