@@ -4,6 +4,12 @@ Class {
 	#category : #Bomberman
 }
 
+{ #category : #'as yet unclassified' }
+BombermanBonus >> demandOfEffectOfPlayer: anPlayer [
+
+
+]
+
 { #category : #accessing }
 BombermanBonus >> getType [ 
 

@@ -87,3 +87,9 @@ BombermanPlayer >> setKey: anObject [
 
 	anObject isKey ifTrue: (key := true).
 ]
+
+{ #category : #'as yet unclassified' }
+BombermanPlayer >> winOneLife [
+
+	life<3 ifTrue: [life := life+1].
+]
