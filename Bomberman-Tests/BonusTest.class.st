@@ -47,6 +47,35 @@ BonusTest >> testCaseContainBonus [
 ]
 
 { #category : #tests }
+BonusTest >> testEffectBonusLifeSameCaseOfPlayer [
+
+	|board bonus case player|
+	
+	"On crée le board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '#  @#'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	bonus := BombermanBonusLife new.
+	
+	case := board atColumn: 3 atRow: 1.
+	
+	case addBonus: bonus.
+	
+	player :=  board atColumn: 4 atRow: 1 .
+	
+	player looseOneLife.
+	
+	self assert: player life equals: 2.
+	
+	player move: CpDirection west.
+	
+	self assert: player life equals: 3.
+]
+
+{ #category : #tests }
 BonusTest >> testVerifyTypeBonus [ 
 
 	|bonus1|
