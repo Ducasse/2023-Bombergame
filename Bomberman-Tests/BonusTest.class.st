@@ -26,3 +26,13 @@ BonusTest >> testCaseContainBonus [
 	
 	self assert: case containBonus equals: true.
 ]
+
+{ #category : #tests }
+BonusTest >> testVerifyTypeBonus [ 
+
+	|bonus1|
+	
+	bonus1 := BombermanBonusLife new.
+	
+	self assert: bonus1 getType equals: 'BombermanBonusLife'.
+]
