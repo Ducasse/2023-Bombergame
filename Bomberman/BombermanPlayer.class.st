@@ -83,9 +83,15 @@ BombermanPlayer >> setBombe [
 ]
 
 { #category : #initialization }
+BombermanPlayer >> setKey [ 
+
+	key := true.
+]
+
+{ #category : #initialization }
 BombermanPlayer >> setKey: anObject [ 
 
-	anObject isKey ifTrue: (key := true).
+	anObject isKey ifTrue: [ key := true ] .
 ]
 
 { #category : #'as yet unclassified' }
