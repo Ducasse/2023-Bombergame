@@ -38,6 +38,11 @@ BombermanElement >> background: anObject [
 	background := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+BombermanElement >> backgroundPaint [ 
+	^ Color transparent
+]
+
 { #category : #move }
 BombermanElement >> basicPosition: aPosition [
 	"A position is a x,y kind of object."

@@ -10,6 +10,11 @@ BombermanWall class >> textualMapCharacter [
 	^ $#
 ]
 
+{ #category : #'as yet unclassified' }
+BombermanWall >> backgroundPaint [ 
+	^ Color black.
+]
+
 { #category : #move }
 BombermanWall >> bringIn: anActor going: aDirection [
 	"anActor does not move in a wall. Nothing enter a wall."
