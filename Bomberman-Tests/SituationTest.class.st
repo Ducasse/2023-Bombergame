@@ -309,3 +309,31 @@ SituationTest >> testPlayerSetBombe [
 	
 	self assert:  player position equals: bombe position.
 ]
+
+{ #category : #tests }
+SituationTest >> testPlayerWinKey [ 
+
+	"Variable utiles pour le test"
+	| board player caseKey|
+	
+	"On crée le Board"
+	board := BombermanBoard  createWithBoard:
+		         ((MygLevelImporter
+			           fromString: '#@  #'
+			           fromPackage: BombermanBoard  package) do: [ :each |
+			          each configured ]).
+		
+	player := board atColumn: 2 atRow: 1.
+	
+	self assert: player getKey equals: false.
+	
+	caseKey := board atColumn: 3 atRow: 1.
+	
+	caseKey setKey. 
+	
+	self assert: caseKey containKey equals: true. 
+	
+	player move: CpDirection east.
+	
+	self assert: player getKey equals: true.
+]
