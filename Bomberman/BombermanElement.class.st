@@ -3,7 +3,8 @@ Class {
 	#superclass : #MygAbstractBox,
 	#instVars : [
 		'background',
-		'key'
+		'key',
+		'bonus'
 	],
 	#category : #Bomberman
 }
@@ -17,6 +18,12 @@ BombermanElement class >> configured [
 { #category : #'default encoding' }
 BombermanElement class >> textualMapCharacter [
 	^ $Z
+]
+
+{ #category : #adding }
+BombermanElement >> addBonus: anBonus [ 
+
+	bonus := anBonus.
 ]
 
 { #category : #accessing }
@@ -64,6 +71,13 @@ BombermanElement >> bringIn: aSkMovable going: aDirection [
 BombermanElement >> configured [ 
 
 	^self
+]
+
+{ #category : #accessing }
+BombermanElement >> containBonus [ 
+
+	bonus ifNotNil: [^ true].
+	bonus ifNil: [ ^ false ].
 ]
 
 { #category : #accessing }
