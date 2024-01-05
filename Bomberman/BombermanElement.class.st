@@ -65,7 +65,8 @@ BombermanElement >> bringIn: aSkMovable going: aDirection [
 	self board updatePositionOf: aSkMovable from: previousPosition.
 	self board atColumn: previousPosition x atRow: previousPosition y put: self . 
 	
-	bonus demandOfEffectOfPlayer: aSkMovable.
+	bonus ifNotNil: [bonus demandOfEffectOfPlayer: aSkMovable].
+	key ifNotNil: [ aSkMovable setKey].
 	
 	^ true
 ]
