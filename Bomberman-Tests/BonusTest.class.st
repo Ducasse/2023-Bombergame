@@ -4,6 +4,25 @@ Class {
 	#category : #'Bomberman-Tests'
 }
 
+{ #category : #'as yet unclassified' }
+BonusTest >> testBonusLifeGiveOneLife [
+
+	|bonus player|
+	
+	bonus := BombermanBonusLife new.
+	
+	player := BombermanPlayer new.
+	
+	player looseOneLife.
+	
+	self assert: player life equals: 3.
+	
+	player acceptEffectBonus: bonus.
+	
+	self assert: player life equals: 3.
+
+]
+
 { #category : #' tests' }
 BonusTest >> testCaseContainBonus [
 
