@@ -15,9 +15,9 @@ BonusTest >> testBonusLifeGiveOneLife [
 	
 	player looseOneLife.
 	
-	self assert: player life equals: 3.
+	self assert: player life equals: 2.
 	
-	player acceptEffectBonus: bonus.
+	bonus demandOfEffectOfPlayer: player.
 	
 	self assert: player life equals: 3.
 
