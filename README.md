@@ -8,9 +8,9 @@ At its core, Bombergame revolves around strategic maze-based gameplay. Players n
 
 **Table of Contents**
 1. [Installation](#installation)
-   - [Step 1: Dependency Installation](#step-1-dependency-installation)
-   - [Step 2: Cloning the Repository](#step-2-cloning-the-repository)
-   - [Step 3: Verifying the Installation](#step-3-verifying-the-installation)
+   - [Dependency Installation](#step-1-dependency-installation)
+   - [Cloning the Repository](#step-2-cloning-the-repository)
+   - [Verifying the Installation](#step-3-verifying-the-installation)
 2. [Running the Game](#running-the-game)
    - [Launching the Game](#launching-the-game)
    - [Understanding the Interface](#understanding-the-interface)
@@ -68,7 +68,7 @@ After installing dependencies, proceed to clone the Bomberman game repository:
 
 4. If the repository status shows 'NOT LOADED', enter the repository and right-click on each folder to select 'Load'.
 
-### Step 2: Verifying the Installation
+### Step 3: Verifying the Installation
 
 Finally, use the System Browser to confirm the successful installation. You should see the folders 'Bomberman' and 'Bomberman-Tests' indicating that the setup is complete and the game is ready to be launched.
 
