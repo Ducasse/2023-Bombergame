@@ -1,6 +1,6 @@
 # Bombergame
 
-Bombergame is a clone of the classic Bomberman game. This project is a collaborative effort by Alexandre Benjamin, Hadid Yanis, and Harrar M'hamed.
+Bombergame is a clone of the classic Bomberman game featuring some changes and adjustments. This project is a collaborative effort by Alexandre Benjamin, Hadid Yanis, and Harrar M'hamed.
 
 Developed using Pharo, Myg and Bloc as part of the C3P course curriculum at the University of Lille for the academic year 2023/2024.
 
