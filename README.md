@@ -52,3 +52,38 @@ After installing dependencies, proceed to clone the Bomberman game repository:
 ### Step 4: Verifying the Installation
 
 Finally, use the System Browser to confirm the successful installation. You should see the folders 'Bomberman' and 'Bomberman-Tests' indicating that the setup is complete and the game is ready to be launched.
+
+## Running the Game
+
+To experience the graphical interface of Bombergame, which is currently under active development, follow these simple steps:
+
+### Launching the Game
+
+1. Open the Pharo Playground in your environment.
+2. Execute the following command:
+
+   ```smalltalk
+   Bomberman new open.
+   ```
+
+### Understanding the Interface
+
+Upon launching the game, you'll be greeted with the main user interface, where different elements are represented by specific colors:
+
+- **Black**: Represents Walls
+- **Green**: Represents Ground
+- **Red**: Represents the Player
+- **Brown**: Represents Boxes
+
+### Current Gameplay Features
+
+As of now, the game supports basic player movement using keyboard arrow keys. This limited functionality is a result of our prioritized development approach.
+
+### Where to Find the Code and Tests
+
+- **Game Code**: Located in the `Bomberman` package. You can explore and modify game settings such as window size or map layout in the `Bomberman` class, specifically within the `initialize` method.
+- **Tests**: Found in the `Bomberman-Tests` folder. The tests are easily executable with a simple click on the corresponding buttons in the Pharo environment.
+
+### Known Issues
+
+We've identified a recent issue causing one of our tests to fail, which we have not yet resolved due to time constraints. However, all other tests are currently passing.
