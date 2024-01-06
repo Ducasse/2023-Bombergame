@@ -38,6 +38,11 @@ BombermanElement >> background: anObject [
 	background := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+BombermanElement >> backgroundPaint [ 
+	^ Color transparent
+]
+
 { #category : #move }
 BombermanElement >> basicPosition: aPosition [
 	"A position is a x,y kind of object."
@@ -56,14 +61,15 @@ BombermanElement >> board: aBoard [
 BombermanElement >> bringIn: aSkMovable going: aDirection [
 	
 
-	| previousPosition |
+	| previousPosition|
 	previousPosition := aSkMovable position.
 	aSkMovable basicPosition: self position.
 	self board gameManager ifNotNil: [
 		self board gameManager currentMoveCount:
 			self board gameManager currentMoveCount + 1 ].
-	self board updatePositionOf: aSkMovable from: previousPosition.
-	self board atColumn: previousPosition x atRow: previousPosition y put: self . 
+	self board updatePositionOf: aSkMovable from: previousPosition. 
+	self board atColumn: previousPosition x atRow: previousPosition y put: self.
+	
 	
 	bonus ifNotNil: [bonus demandOfEffectOfPlayer: aSkMovable].
 	key ifNotNil: [ aSkMovable setKey].

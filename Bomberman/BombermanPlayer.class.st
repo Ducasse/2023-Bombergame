@@ -14,6 +14,11 @@ BombermanPlayer class >> textualMapCharacter [
 ]
 
 { #category : #'as yet unclassified' }
+BombermanPlayer >> backgroundPaint [ 
+	^ Color red.
+]
+
+{ #category : #'as yet unclassified' }
 BombermanPlayer >> explose [
 	self looseOneLife
 ]
