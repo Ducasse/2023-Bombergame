@@ -87,3 +87,33 @@ As of now, the game supports basic player movement using keyboard arrow keys. Th
 ### Known Issues
 
 We've identified a recent issue causing one of our tests to fail, which we have not yet resolved due to time constraints. However, all other tests are currently passing.
+
+## Code Structure and Design
+
+Below is an overview of the key classes and their roles in the game's framework.
+
+### Main Game Classes
+
+- **Bomberman Class**: This is the primary class responsible for initializing and launching the game. It acts as the entry point, orchestrating the overall game flow.
+
+- **BombermanBoard Class**: Inherits from `MygBoard`, this class manages the game board (grid). It is central to handling the spatial arrangement of game elements and the interactions between them.
+
+### Specialized Game Element Classes
+
+- **BombermanBonus**: This class encapsulates the functionality of various in-game bonuses. For example, `BombermanBonusLife` is a subclass that specifically manages the logic for adding extra lives to the player.
+
+- **BombermanElement**: Extending `MygAbstractBox`, this class serves as a base for all board elements like players, boxes, walls, etc. It defines common properties and behaviors that are shared across different elements on the game board.
+
+### Event Handling and User Interaction
+
+- **BombermanEvent**: Inheriting from `BlElement`, this class is crucial for handling events, particularly those triggered by keyboard inputs. It works in tandem with the main Bomberman class to interpret and respond to player actions.
+
+### Visual Representation and Rendering
+
+- **BombermanVision**: This class is dedicated to rendering the visual aspects of each element in the game. It ensures that the graphical representation of game elements is consistent and visually appealing.
+
+### Testing Focus
+
+Given the player's central role in the game experience, we have prioritized testing around the player character. This strategy ensures that the core game mechanics involving player interaction are robust and error-free. By extensively testing player-related functionalities, we effectively cover a significant portion of the game's logic and interactions.
+
+This design philosophy underpins our commitment to delivering a stable and engaging gaming experience, with an emphasis on reliability and user-centric features.
