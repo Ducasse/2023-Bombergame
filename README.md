@@ -1,9 +1,28 @@
 # Bombergame
 
 Bombergame is a clone of the classic Bomberman game. This project is a collaborative effort by Alexandre Benjamin, Hadid Yanis, and Harrar M'hamed.
-Developed using Pharo as part of the C3P course curriculum at the University of Lille for the academic year 2023/2024.
+
+Developed using Pharo, Myg and Bloc as part of the C3P course curriculum at the University of Lille for the academic year 2023/2024.
 
 At its core, Bombergame revolves around strategic maze-based gameplay. Players navigate through levels, placing bombs to clear obstacles and outmaneuver opponents.
+
+**Table of Contents**
+1. [Installation](#installation)
+   - [Dependency Installation](#step-1-dependency-installation)
+   - [Cloning the Repository](#step-2-cloning-the-repository)
+   - [Verifying the Installation](#step-3-verifying-the-installation)
+2. [Running the Game](#running-the-game)
+   - [Launching the Game](#launching-the-game)
+   - [Understanding the Interface](#understanding-the-interface)
+   - [Current Gameplay Features](#current-gameplay-features)
+   - [Where to Find the Code and Tests](#where-to-find-the-code-and-tests)
+   - [Known Issues](#known-issues)
+3. [Code Structure and Design](#code-structure-and-design)
+   - [Main Game Classes](#main-game-classes)
+   - [Specialized Game Element Classes](#specialized-game-element-classes)
+   - [Event Handling and User Interaction](#event-handling-and-user-interaction)
+   - [Visual Representation and Rendering](#visual-representation-and-rendering)
+   - [Testing Focus](#testing-focus)
 
 ## Installation
 
@@ -36,7 +55,7 @@ Metacello new
     load.
 ```
 
-### Step 3: Cloning the Repository
+### Step 2: Cloning the Repository
 
 After installing dependencies, proceed to clone the Bomberman game repository:
 
@@ -49,7 +68,7 @@ After installing dependencies, proceed to clone the Bomberman game repository:
 
 4. If the repository status shows 'NOT LOADED', enter the repository and right-click on each folder to select 'Load'.
 
-### Step 4: Verifying the Installation
+### Step 2: Verifying the Installation
 
 Finally, use the System Browser to confirm the successful installation. You should see the folders 'Bomberman' and 'Bomberman-Tests' indicating that the setup is complete and the game is ready to be launched.
 
