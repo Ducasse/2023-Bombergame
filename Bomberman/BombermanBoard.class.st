@@ -50,6 +50,7 @@ BombermanBoard >> atColumn: anInteger atRow: anInteger2 [
 BombermanBoard >> atColumn: anInteger atRow: anInteger2 put: anElement [
 
 	grid at: anInteger @ anInteger2 put: anElement.
+	anElement position: (anInteger@anInteger2).
 	
 ]
 
@@ -182,21 +183,17 @@ BombermanBoard >> setPositionKey: posKey [
 BombermanBoard >> updatePositionOf: aSkMovable from: previousPosition [
 	"Put back the previous position element."
 
-	self
+	"self
 		atColumn: previousPosition x
 		atRow: previousPosition y
-		put: aSkMovable background.
-	
-	"put the current position element as previous background of the moving element."
-	aSkMovable background:
-		(self atColumn: aSkMovable position x atRow: aSkMovable position y).
+		put: aSkMovable background."
 	
 	"finally place the moving element to its new location"
 	self
 		atColumn: aSkMovable position x
 		atRow: aSkMovable position y
 		put: aSkMovable.
-	self isFinished ifTrue: [ self endGame ]
+	"self isFinished ifTrue: [ self endGame ]"
 ]
 
 { #category : #accessing }

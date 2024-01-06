@@ -47,8 +47,9 @@ Bomberman >> initialize [
 
 map := 
 '######
-#@ $ #
+# @$ #
 #    #
+#$  $#
 ######'.
 	
 	board := BombermanBoard  createWithBoard:
