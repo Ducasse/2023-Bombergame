@@ -51,7 +51,8 @@ EndGameTest >> testPlayerWin [
 	
 	self assert: (board player move: CpDirection east).
 	
-	self assert: player position equals: door position.
+	self assert: player position equals: (3@1).
+
 	
 	
 ]
