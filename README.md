@@ -16,7 +16,6 @@ At its core, Bombergame revolves around strategic maze-based gameplay. Players n
    - [Understanding the Interface](#understanding-the-interface)
    - [Current Gameplay Features](#current-gameplay-features)
    - [Where to Find the Code and Tests](#where-to-find-the-code-and-tests)
-   - [Known Issues](#known-issues)
 3. [Code Structure and Design](#code-structure-and-design)
    - [Main Game Classes](#main-game-classes)
    - [Specialized Game Element Classes](#specialized-game-element-classes)
@@ -102,10 +101,6 @@ As of now, the game supports basic player movement using keyboard arrow keys. Th
 
 - **Game Code**: Located in the `Bomberman` package. You can explore and modify game settings such as window size or map layout in the `Bomberman` class, specifically within the `initialize` method.
 - **Tests**: Found in the `Bomberman-Tests` folder. The tests are easily executable with a simple click on the corresponding buttons in the Pharo environment.
-
-### Known Issues
-
-We've identified a recent issue causing one of our tests to fail, which we have not yet resolved due to time constraints. However, all other tests are currently passing.
 
 ## Code Structure and Design
 
