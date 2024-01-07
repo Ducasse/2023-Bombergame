@@ -92,15 +92,16 @@ Upon launching the game, you'll be greeted with the main user interface, where d
 - **Green**: Represents Ground
 - **Red**: Represents the Player
 - **Brown**: Represents Boxes
-
+- 
 ### Current Gameplay Features
 
-As of now, the game supports basic player movement using keyboard arrow keys. This limited functionality is a result of our prioritized development approach.
+As of now, our game engine robustly supports a wide range of actions and movements. However, the user interface is currently limited to generating maps with various types of elements and supporting basic player movement using keyboard arrow keys. This limitation is a strategic choice, stemming from our prioritized development approach that emphasizes game logic and adheres to a test-driven development (TDD) methodology.
 
-### Where to Find the Code and Tests
+#### Upcoming Feature: Bomb Placement and Explosions
 
-- **Game Code**: Located in the `Bomberman` package. You can explore and modify game settings such as window size or map layout in the `Bomberman` class, specifically within the `initialize` method.
-- **Tests**: Found in the `Bomberman-Tests` folder. The tests are easily executable with a simple click on the corresponding buttons in the Pharo environment.
+A feature involving bomb placement and its subsequent explosions on the graphical interface is nearing completion in our development pipeline. This enhancement, currently under active development in a separate branch named "upgrade UI", promises to bring a more dynamic and interactive gaming experience. 
+
+However, due to the time constraints imposed by the project deadline, we have decided not to merge this feature into the main production branch at this time. One key reason is that the integration of this feature currently causes some of our test cases to fail, causing issues with the stability and reliability of the gameplay.
 
 ## Code Structure and Design
 
