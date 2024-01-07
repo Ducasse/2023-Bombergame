@@ -83,6 +83,11 @@ To experience the graphical interface of Bombergame, which is currently under ac
    ```smalltalk
    Bomberman new open.
    ```
+   
+## Game Screenshot
+
+![Bombergame Screenshot](ressources/GameplayScreenShot.png)
+
 
 ### Understanding the Interface
 
