@@ -45,12 +45,21 @@ Bomberman >> downEvent [
 { #category : #initialization }
 Bomberman >> initialize [ 
 
-map := 
-'######
-# @$ #
-#    #
-#$  $#
-######'.
+map :=
+'#####################
+# @ $  ##D######  $ #
+# $$  $        $  $$#
+#    ###  ##  ###   #
+# $  #      $     $ #
+# $  ######$######$ #
+# $$ #   D       $$ #
+# $  #############  #
+# $  $          $  $#
+#    ##  ####  ##   #
+# $$$$  ##  ##  $$$ #
+#        $ $        #
+#####################'.
+
 	
 	board := BombermanBoard  createWithBoard:
 		         ((MygLevelImporter
@@ -79,7 +88,6 @@ map :=
 		1 to: board width do: [ :x | container addChild:(vision coloringElement: (board atColumn: x atRow: y) to: container)] ].
 	
 	space root addChild:container.
-
 ]
 
 { #category : #'as yet unclassified' }
