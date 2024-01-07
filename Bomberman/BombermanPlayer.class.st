@@ -15,7 +15,7 @@ BombermanPlayer class >> textualMapCharacter [
 
 { #category : #'as yet unclassified' }
 BombermanPlayer >> backgroundPaint [ 
-	^ Color red.
+	^ Color blue.
 ]
 
 { #category : #'as yet unclassified' }
