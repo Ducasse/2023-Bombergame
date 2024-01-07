@@ -90,9 +90,10 @@ Upon launching the game, you'll be greeted with the main user interface, where d
 
 - **Black**: Represents Walls
 - **Green**: Represents Ground
-- **Red**: Represents the Player
+- **Blue**: Represents the Player
 - **Brown**: Represents Boxes
-- 
+- **Gray**: Represents the door to win the level
+  
 ### Current Gameplay Features
 
 As of now, our game engine robustly supports a wide range of actions and movements. However, the user interface is currently limited to generating maps with various types of elements and supporting basic player movement using keyboard arrow keys. This limitation is a strategic choice, stemming from our prioritized development approach that emphasizes game logic and adheres to a test-driven development (TDD) methodology.
