@@ -133,8 +133,28 @@ Below is an overview of the key classes and their roles in the game's framework.
 
 - **BombermanVision**: This class is dedicated to rendering the visual aspects of each element in the game. It ensures that the graphical representation of game elements is consistent and visually appealing.
 
+Based on the detailed file structure of your Bomberman project, additional concepts from your course that are likely utilized in your development can be identified and highlighted. Here's an enhanced description that includes these concepts:
+
+## Utilization of Concepts Covered in Course
+
+In the Bombergame project, we have integrated several key programming concepts taught in our course :
+
+1. **Inheritance**: This is a foundational concept used in our project, with classes like `BombermanBonusLife` inheriting properties and behaviors from their parent classes such as `BombermanBonus`.
+
+2. **Polymorphism**: Demonstrated in subclasses of `BombermanElement`, where methods are redefined to provide unique functionalities, thereby utilizing polymorphism to enhance flexibility and reusability.
+
+3. **Delegation**: Our `Bomberman` class doesn't handle rendering directly but delegates it to `BombermanVision` and `BlSpace`, showcasing the use of delegation to distribute responsibilities among different classes.
+
+4. **Encapsulation**: Each class, such as `BombermanPlayer`, `BombermanBox`, and `BombermanDoor`, encapsulates its data and behavior, ensuring a clear separation of concerns.
+
+5. **Modularity**: The project is organized into modular classes with specific responsibilities, facilitating easier maintenance and keeping the code open to future extensions.
+
+7. **Composition**: Classes like `BombermanBoard` use composition to include instances of other classes (like `BombermanElement`), forming more complex classes and functionnalities.
+
+8. **Single Responsibility Principle**: Each class in the project appears to have a single responsibility, such as handling game elements, managing user events, or rendering the game UI, adhering to the SRP principle.
+
+While we did not heavily incorporate design patterns considering the scope and scale of our code, their addition of could be instrumental down the line in scaling and extending the game in the future.
+
 ### Testing Focus
 
 Given the player's central role in the game experience, we have prioritized testing around the player character. This strategy ensures that the core game mechanics involving player interaction are robust and error-free. By extensively testing player-related functionalities, we effectively cover a significant portion of the game's logic and interactions.
-
-This design philosophy underpins our commitment to delivering a stable and engaging gaming experience, with an emphasis on reliability and user-centric features.
