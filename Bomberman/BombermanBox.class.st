@@ -10,7 +10,7 @@ BombermanBox class >> textualMapCharacter [
 	^ $$
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanBox >> backgroundPaint [ 
 	^ Color brown.
 ]
@@ -22,7 +22,7 @@ BombermanBox >> bringIn: anActor going: aDirection [
 	^ false
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanBox >> explose [ 
 	
 	|previousPosition|

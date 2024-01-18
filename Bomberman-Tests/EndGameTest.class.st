@@ -4,7 +4,7 @@ Class {
 	#category : #'Bomberman-Tests'
 }
 
-{ #category : #' tests' }
+{ #category : #tests }
 EndGameTest >> testDoorFinalCreated [ 
 
 	|door board|
@@ -24,7 +24,7 @@ EndGameTest >> testDoorFinalCreated [
 	self assert: door position y <= board height.
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 EndGameTest >> testPlayerWin [ 
 
 	"Variables pour réaliser les tests "

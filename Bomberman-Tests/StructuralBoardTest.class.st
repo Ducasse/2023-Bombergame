@@ -13,7 +13,7 @@ StructuralBoardTest >> map [
 ######'	
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 StructuralBoardTest >> testBoardHeight [
 
 	|board|
@@ -26,7 +26,7 @@ StructuralBoardTest >> testBoardHeight [
 	self assert: board height equals: 1.
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 StructuralBoardTest >> testBoardWidth [
 
 	|board|
@@ -39,7 +39,7 @@ StructuralBoardTest >> testBoardWidth [
 	self assert: board width equals: 5.
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 StructuralBoardTest >> testKeyCreateInBoard [ 
 
 	|board|

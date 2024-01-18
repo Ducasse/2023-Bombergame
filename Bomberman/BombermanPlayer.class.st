@@ -13,12 +13,12 @@ BombermanPlayer class >> textualMapCharacter [
 	^ $@
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanPlayer >> backgroundPaint [ 
 	^ Color blue.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #actions }
 BombermanPlayer >> explose [
 	self looseOneLife
 ]
@@ -59,7 +59,7 @@ BombermanPlayer >> life [
 	^life
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #actions }
 BombermanPlayer >> looseOneLife [
 	life := life - 1 .
 ]
@@ -99,7 +99,7 @@ BombermanPlayer >> setKey: anObject [
 	anObject isKey ifTrue: [ key := true ] .
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #actions }
 BombermanPlayer >> winOneLife [
 
 	life<3 ifTrue: [life := life+1].

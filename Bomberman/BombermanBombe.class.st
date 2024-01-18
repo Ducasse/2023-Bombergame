@@ -9,7 +9,7 @@ BombermanBombe class >> textualMapCharacter [
 	^ $O
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #action }
 BombermanBombe >> explose [ 
 	
 	|previousPosition|
@@ -18,20 +18,18 @@ BombermanBombe >> explose [
 	self board atColumn: previousPosition x atRow: previousPosition y put: BombermanGround new .
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #action }
 BombermanBombe >> explose: anElement [
 
 	anElement explose.
 	self explose.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #action }
 BombermanBombe >> exploseNeighbors [
 	
-	|positionBombe|
-	
+	| positionBombe |
 	positionBombe := self position.
-	
 	self explose: (self board atColumn: positionBombe x+1 atRow: positionBombe y).
 	self explose: (self board atColumn: positionBombe x-1 atRow: positionBombe y).
 	self explose: (self board atColumn: positionBombe x atRow: positionBombe y+1).

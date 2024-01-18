@@ -10,7 +10,7 @@ BombermanWall class >> textualMapCharacter [
 	^ $#
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanWall >> backgroundPaint [ 
 	^ Color black.
 ]

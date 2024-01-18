@@ -4,26 +4,20 @@ Class {
 	#category : #'Bomberman-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 BonusTest >> testBonusLifeGiveOneLife [
 
-	|bonus player|
-	
+	| bonus player |
 	bonus := BombermanBonusLife new.
-	
 	player := BombermanPlayer new.
-	
 	player looseOneLife.
-	
 	self assert: player life equals: 2.
-	
 	bonus demandOfEffectOfPlayer: player.
-	
 	self assert: player life equals: 3.
 
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 BonusTest >> testCaseContainBonus [
 
 	|board bonus case|
@@ -78,9 +72,7 @@ BonusTest >> testEffectBonusLifeSameCaseOfPlayer [
 { #category : #tests }
 BonusTest >> testVerifyTypeBonus [ 
 
-	|bonus1|
-	
+	| bonus1 |
 	bonus1 := BombermanBonusLife new.
-	
 	self assert: bonus1 getType equals: 'BombermanBonusLife'.
 ]

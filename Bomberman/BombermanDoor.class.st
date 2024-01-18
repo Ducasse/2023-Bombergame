@@ -12,14 +12,9 @@ BombermanDoor class >> textualMapCharacter [
 { #category : #move }
 BombermanDoor >> bringIn: anActor going: aDirection [
 
-	anActor containKey ifFalse: [ ^ false ].
-	anActor containKey ifTrue: [ ^ super bringIn: anActor  going: aDirection  ].
-]
-
-{ #category : #initialization }
-BombermanDoor >> initialize [ 
-
-	super initialize.
+	anActor containKey 
+		ifFalse: [ ^ false ]
+	 	ifTrue: [ ^ super bringIn: anActor  going: aDirection  ].
 ]
 
 { #category : #testing }

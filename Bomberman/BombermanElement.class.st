@@ -38,7 +38,7 @@ BombermanElement >> background: anObject [
 	background := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanElement >> backgroundPaint [ 
 	^ Color transparent
 ]
@@ -102,7 +102,7 @@ BombermanElement >> defaultBackground [
 	^ BombermanGround  new
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #action }
 BombermanElement >> explose [ 
 
 	^ false.

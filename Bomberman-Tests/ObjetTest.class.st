@@ -13,7 +13,7 @@ ObjetTest >> map [
 ######'	
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 ObjetTest >> testBombeExploseBox [
 
 	"Variable utile pour les tests"
@@ -53,7 +53,7 @@ ObjetTest >> testBombeExploseBox [
 
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 ObjetTest >> testBombeExploseGround [
 	
 	"Variable utile pour les tests"
@@ -141,7 +141,7 @@ ObjetTest >> testBombeExploseNeighbors [
 
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 ObjetTest >> testBombeExplosePlayer [
 
 	"Variable utile pour les tests"
@@ -181,7 +181,7 @@ ObjetTest >> testBombeExplosePlayer [
 
 ]
 
-{ #category : #' tests' }
+{ #category : #tests }
 ObjetTest >> testBombeExploseWall [
 
 	"Variable utile pour les tests"

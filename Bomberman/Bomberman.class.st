@@ -28,7 +28,7 @@ Bomberman class >> open [
 		
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Bomberman >> downEvent [ 
 
 	|player|
@@ -90,7 +90,7 @@ map :=
 	space root addChild:container.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Bomberman >> leftEvent [ 
 
 	|player|
@@ -130,7 +130,7 @@ Bomberman >> open [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Bomberman >> rechargeBoard [ 
 
 	container := BlElement new
@@ -150,7 +150,7 @@ Bomberman >> rechargeBoard [
 space root addChild:container.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 Bomberman >> rightEvent [ 
 
 	|player|

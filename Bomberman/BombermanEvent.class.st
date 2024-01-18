@@ -4,7 +4,7 @@ Class {
 	#category : #Bomberman
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanEvent >> downEvent [ 
 
 	CommandLineUIManager default alert: 'DOWN SELECTED'.
@@ -29,7 +29,7 @@ anEvent key name = #DOWN ifTrue: [ ^self downEvent ].
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanEvent >> spaceEvent [
 
 	CommandLineUIManager default alert: 'SPACE SELECTED'.

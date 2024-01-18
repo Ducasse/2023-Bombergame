@@ -9,7 +9,7 @@ BombermanGround class >> textualMapCharacter [
 	^ Character space
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 BombermanGround >> backgroundPaint [ 
 	^ Color green.
 ]

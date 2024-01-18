@@ -4,7 +4,7 @@ Class {
 	#category : #Bomberman
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #action }
 BombermanBonusLife >> demandOfEffectOfPlayer: anPlayer [
 
 	anPlayer winOneLife.
